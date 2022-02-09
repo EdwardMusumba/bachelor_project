@@ -1,6 +1,6 @@
 
-const endpoint = "http://localhost:3007/api/v1/login_api";
-const homePageUrl = "../home/home-index.html";
+const endpoint = "http://localhost:3007/api/v1/signin";
+const homePageUrl = "../home/home-login.html";
 
 function onSuccess(response) {
     window.location.href = homePageUrl;
