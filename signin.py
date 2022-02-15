@@ -1,16 +1,13 @@
-from flask import Flask
-
+from flask import Flask,request
 import sqlite3
-from sqlite3 import Error
+from flask_restful import Api, request
 import json
-
-from flask import Flask, Response
-from flask_restful import Api, Resource, request
 from flask_cors import CORS
 
 
-app = Flask("SigninAPI")
+app = Flask(__name__)
 CORS(app)
+api = Api(app)
 
 def create_user(conn, body):
     query = """insert into users (name, email, password, role)
@@ -35,7 +32,7 @@ def get_username_and_password(conn, body):
     else:
         return user
 
-DB_FILE = "C:/Users/user/Desktop/BACHELOR_PROJECT/users.db"
+DB_FILE = "C:/Users/user/Desktop/BACHELOR_PROJECT/LOGIN/users.db"
 
 
 

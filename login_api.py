@@ -75,7 +75,7 @@ api = Api(app)
 
 class User(Resource):
    
-    USER_DATABASE = "C:/Users/user/Desktop/BACHELOR_PROJECT/users.db"
+    USER_DATABASE = "C:/Users/user/Desktop/BACHELOR_PROJECT/LOGIN/users.db"
 
 
     def get(self, user_id=None):
