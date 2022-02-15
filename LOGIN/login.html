@@ -1,36 +1,27 @@
 <!DOCTYPE html>
+
 <html>
-<head>
-        <meta name ="viewport" content="width=device-width,initial-scale=1.0">
-        <meta charset="utf-8">
-        
-        <title>Login Form</title>
-        <link rel="stylesheet" href="login.css"rel="stylesheet"type="text/css">
-    
-        <script src ="login.js"></script>
+    <head>
+        <title>LOGIN FORM</title>
+        <script src="login.js"></script>
+    </head>
 
-
-
-
-
-</head>
-<body>
-     <div class = "container">
-         <form class ="form" id ='login'>
-                <h1 class="form__title">RADIO EAST LIMITED</h1>
-                <div classs="form__message form__message--error"></div>
-                <div class="form__input-group">
-                    <input type ="text" class ="form__input"autofocus placeholder="Username or email">
-                    <div class="form__input-error-message"></div>
-                </div>
-
-                <div class="form__input-group">
-                    <input type ="password" name="password" class ="form__input"autofocus placeholder="Password">
-                    <div class="form__input-error-message"></div>
-
-                </div>
-
-                <label class="form__label" label for ="Role">Select Role</label>
+    <body>
+        <div>
+            <div>
+                <input name ="name" type="text" placeholder="Name">
+            </div>
+            <div>
+                <input name="email" type="email" placeholder="Email">
+            </div>
+            <div>
+                <input name="password" type="password" placeholder="Password">
+            </div>
+            <div>
+                <button onclick="signin()">Signin</button>
+            </div>
+            <div>
+                <label name=" role" label for ="role">Select Role</label>
                 <select id ="Role">
                     <option value ="Role">Select Role</option>
                     <option value ="Administrator">Administrator</option>
@@ -38,29 +29,7 @@
                     <option value ="News reader">News reader</option>
                     <option value ="News reporter">News reporter</option>
                 </select>
-               
-                    <p class="form__text">
-
-                        <a href="#" class="form__link">Forgot your password</a>
-                    </p>
-                    <p class ="form__text">
-                        <a class="form__link" href="main.html" id="linkCreateAccount">Dont have an account?Create one</a>
-                    </p>
-
-
-        
-    
-    
-    
-                    <button class="form__button" type="submit" onclick = "signup()" >Continue</button>
-    
-    </div>
-    
-
-
-
-
-
-
-</body>
+            </div>
+        </div>
+    </body>
 </html>

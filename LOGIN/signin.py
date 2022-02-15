@@ -53,6 +53,7 @@ def sign_in():
         body = request.json
         conn = connect_to_database(DB_FILE)
         user = get_username_and_password(conn, body)
+        conn.close()
         if not user:
             error = {
                 "error": "--Failed to sign in. Username or password are wrong."
@@ -68,6 +69,11 @@ def sign_in():
         error = {
             "error": f"--Failed to sign in. Message: {e}"
         }
+        return error,500
 
 if __name__ == "__main__":
     app.run(debug=True, port=3007)
+
+
+
+   

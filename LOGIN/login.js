@@ -32,12 +32,14 @@ function error(response) {
 
 function signin() {
     const data = {
+
         "name": document.getElementsByName("name")[0].value,
         "email": document.getElementsByName("email")[0].value,
         "password": document.getElementsByName("password")[0].value,
         "role": document.getElementsByName("role")[0].value
         
     }
+    console.log(data)
     
     params = {
         method: 'POST',
