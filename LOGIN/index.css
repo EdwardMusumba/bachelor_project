@@ -39,6 +39,8 @@ ul li a:hover{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
+    color:white;
+    font-size: medium;
 }
 
 title h1{
@@ -46,7 +48,7 @@ title h1{
     font-size: 80px;
 }
 
-title paragrah{
+title paragraph{
     color:white;
 }
 

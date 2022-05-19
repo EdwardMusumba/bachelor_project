@@ -4,23 +4,22 @@
     <head>
         <title>LOGIN FORM</title>
         <script src="login.js"></script>
+        <link rel="stylesheet" href="login.css"rel="stylesheet"type="text/css">
     </head>
 
     <body>
-        <div>
-            <div>
-                <input name ="name" type="text" placeholder="Name">
+        <div class = "container">
+            <h2>LOGIN</h2>
+            <div class ="form__input-group">
+                <input name ="name" class ="form__input" type="text" placeholder="Name">
             </div>
-            <div>
-                <input name="email" type="email" placeholder="Email">
+            <div class ="form__input-group">
+                <input name="email" class ="form__input" type="email" placeholder="Email">
             </div>
-            <div>
-                <input name="password" type="password" placeholder="Password">
+            <div class ="form__input-group">
+                <input name="password" class ="form__input" type="password" placeholder="Password">
             </div>
-            <div>
-                <button onclick="signin()">Signin</button>
-            </div>
-            <div>
+            <div >
                 <label name=" role" label for ="role" id ="role">Select Role</label>
                 <select id ="Role">
                     <option value ="Role">Select Role</option>
@@ -30,6 +29,10 @@
                     <option value ="News reporter">News reporter</option>
                 </select>
             </div>
+            <div>
+                <button onclick="signin()" class ="form__button">Signin</button>
+            </div>
+            
         </div>
     </body>
 </html>

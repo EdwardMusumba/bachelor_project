@@ -27,7 +27,7 @@ body{
 }
 .container,
 .form__input,
-.form__buton {
+.form__button {
     font:500 1 rem ''
 }
 .form--hidden{
@@ -72,23 +72,7 @@ body{
     transition:background0.2s,border_color 0.2s;
 
 }
-.form__label{
 
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-
-
-
-
-}
-.form__label:hover {
-    display:block;
-}
 .form__button{
     width:60%;
     padding:1rem 2rem;
@@ -102,15 +86,4 @@ body{
 }
 .form__button:hover{
     transform:scale(0.98);
-}
-.form__link:active {
-    text-align :center;
-}
-.form__link{
-    color:var(--color-secondary);
-    text-decoration:none;
-    cursor:pointer;
-}
-.form__link:hover{
-    text_decoration:underline;
 }
