@@ -1,6 +1,6 @@
 const endpoint = "http://localhost:3007/api/v1/search_newsitems";
 const homePageUrl = "../HTML/search_newsitems.html";
-
+const loginUrl="../HTML/login.html";
 
 
 
@@ -12,9 +12,10 @@ function onSuccess(response) {
 const body = document.getElementsByTagName("body")[0];  
 const div =document.createElement('div');
 
+
 div.className = 'Container'
 
-//window.location.href = homePageUrl;
+
 let table = document.createElement('table');
 table.className='table'
 
@@ -87,6 +88,7 @@ body.appendChild(div);
 }
 
 function onFailure(response) {
+    alert("Unable to search ,Please enter correct news item number");
     return response.json().then(error);
 }
 
@@ -109,7 +111,9 @@ function error(response) {
     errorDiv.appendChild(errorPar);
     body.appendChild(errorDiv);
 }
-
+function back(){
+    window.location.href= loginUrl;
+}
 
 
 function search() {

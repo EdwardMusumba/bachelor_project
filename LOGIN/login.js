@@ -12,12 +12,16 @@ function onSuccess(response) {
     const selection = document.getElementById("Role");
     const role = selection.options[selection.selectedIndex].text.toLowerCase();
     if (role ==="administrator"){
+        alert("you have successfully logged in");
         window.location.href = homePageUrl;
     }else if(role ==="editor"){
+        alert("you have successfully logged in");
         window.location.href = homePageUrl1;
     }else if(role ===" News reader"){
+        alert("you have successfully logged in");
         window.location.href = homePageUrl2;
     }else if(role ===" News reporter"){
+        alert("you have successfully logged in");
         window.location.href = homePageUrl2;
     }
 
@@ -25,6 +29,7 @@ function onSuccess(response) {
 }
 
 function onFailure(response) {
+    alert("login failed");
     return response.json().then(error);
 }
 

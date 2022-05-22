@@ -1,11 +1,14 @@
 const endpoint = "http://localhost:3007/api/v1/register_newsitem";
 const homePageUrl = "../HTML/manage_newsitems.html";
+const loginUrl="../LOGIN/login.html";
 
 function onSuccess(response) {
+    alert("News item is created");
     window.location.href = homePageUrl;
 }
 
 function onFailure(response) {
+    alert("news item can not to be created");
     return response.json().then(error);
 }
 
@@ -26,6 +29,9 @@ function error(response) {
 
     errorDiv.appendChild(errorPar);
     body.appendChild(errorDiv);
+}
+function back(){
+    window.location.href= loginUrl;
 }
 
 function signup() {

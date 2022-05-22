@@ -1,12 +1,15 @@
 const endpoint = "http://localhost:3007/api/v1/edit_newsitem";
 const homePageUrl = "../HTML/edit_newsitems.html";
+const loginUrl="../LOGIN/login.html";
 
 function onSuccess(response) {
+    alert("The news item can be edited")
     window.location.href = homePageUrl;
     
 }
 
 function onFailure(response) {
+    alert("The news item can not be edited")
     return response.json().then(error);
 }
 
@@ -15,6 +18,9 @@ function success(response) {
         throw response;
     } 
     return response
+}
+function back(){
+    window.location.href= loginUrl;
 }
 
 function displayNewsitem(response) {
