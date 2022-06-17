@@ -26,6 +26,22 @@ def register():
         print(error)
         return error, 500
         
+@app.route("/api/v1/edit_newsitem", methods=["POST"])
+def edit():
+    body = request.json
+    print(body)
+    try:
+        conn = connect_to_database(DB_FILE)
+        create_newsitem(conn, body)
+        conn.close()
+        return '', 204
+    except Exception as e:
+        error = {
+            "error": f"--Failed to edit news item. Message {e}"
+        }
+        print(error)
+        return error, 500
+
 
 @app.route("/api/v1/search_newsitems", methods=["POST"])
 def edit():
@@ -44,22 +60,7 @@ def edit():
         print(error)
         return error, 500
         
-@app.route("/api/v1/view_newsitems", methods=["POST"])
-def edit():
-    body = request.json
-    print(body)
-    try:
-        conn = connect_to_database(DB_FILE)
-        r = get_newsitem(conn, body)
-        conn.close()
-        print(r)
-        return json.dumps(r), 200
-    except Exception as e:
-        error = {
-            "error": f"--Failed to edit news item. Message {e}"
-        }
-        print(error)
-        return error, 500
+
 
 @app.route("/api/v1/signin", methods=["POST"])
 def sign_in():

@@ -1,4 +1,8 @@
-//edit
+//EDIT NEWS ITEMS
+const editnewsEndpoint = "http://localhost:3007/api/v1/edit_newsitem";
+const edithomePageUrl = "../HTML/edit_newsitems.html";
+const loginUrl="../LOGIN/login.html";
+
 
 function onSuccess(response) {
     alert("The news item can be edited")
@@ -63,7 +67,10 @@ function signup() {
         .catch(error);
 }
 
-//search 
+//SEARCH NEWS ITEMS
+const searchEndpoint = "http://localhost:3007/api/v1/search_newsitems";
+const searchhomePageUrl = "../HTML/search_newsitems.html";
+const loginUrl1="../HTML/login.html";
 
 
 function onSuccess(response) {
@@ -171,7 +178,7 @@ function error(response) {
     body.appendChild(errorDiv);
 }
 function back(){
-    window.location.href= loginUrl;
+    window.location.href= loginUrl1;
 }
 
 
@@ -200,8 +207,10 @@ function search() {
         .catch(error);
 }
 
-//manage
-
+//MANAGE NEWS ITEMS
+const registerEndpoint = "http://localhost:3007/api/v1/register_newsitem";
+const homePageUrl = "../HTML/manage_newsitems.html";
+const loginUrl2="../LOGIN/login.html";
 
 function onSuccess(response) {
     alert("News item is created");
@@ -232,7 +241,7 @@ function error(response) {
     body.appendChild(errorDiv);
 }
 function back(){
-    window.location.href= loginUrl;
+    window.location.href= loginUrl2;
 }
 
 function signup() {
@@ -262,9 +271,15 @@ function signup() {
         .catch(error);
 }
 
-//login
+//LOGIN 
 //const e = document.getElementById("Role");
 //const strUser = e.options[e.selectedIndex].text;
+
+const usersEndpoint = "http://localhost:3007/api/v1/signin";
+const managehomePageUrl = "../HTML/manage_newsitems.html";
+const editUrl = "../HTML/Editnewsitems.html";
+const searchUrl = "../HTML/search_newsitems.html";
+
     
 
 function onSuccess(response) {
@@ -272,7 +287,7 @@ function onSuccess(response) {
     const role = selection.options[selection.selectedIndex].text.toLowerCase();
     if (role ==="administrator"){
         alert("you have successfully logged in");
-        window.location.href = homePageUrl;
+        window.location.href = managehomePageUrl;
     }else if(role ==="editor"){
         alert("you have successfully logged in");
         window.location.href = editUrl;
