@@ -23,14 +23,6 @@ function back(){
     window.location.href= loginUrl;
 }
 
-function displayNewsitem(response) {
-    const body = document.querySelector('body');
-    for (const newsitem of response) {
-        const p = document.createElement("p");
-        p.innerText = `News item number: ${newsitem[0]}. News item type : ${newsitem[1]}`; 
-        body.appendChild(p);
-    }
-}
 
 function error(response) {
     const body = document.getElementsByTagName("body")[0];
@@ -44,22 +36,7 @@ function error(response) {
     body.appendChild(errorDiv);
 }
 
-function showNewsitem() {
-    const DisplayNewsitemUrl = "http://localhost:5000/newsitem"
 
-    const params = {
-        method: 'GET',
-        mode: 'cors',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    }
-    fetch(DisplayNewsitemUrl, params)
-        .then(success)
-        .then(onSuccess,onFailure)
-        .then(displayNewsitem)
-        .catch(error);
-} 
 
 function signup() {
     const payload = {

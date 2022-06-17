@@ -1,4 +1,3 @@
-
 const endpoint = "http://localhost:3007/api/v1/signin";
 const homePageUrl = "../HTML/manage_newsitems.html";
 const editUrl = "../HTML/Editnewsitems.html";

@@ -1,8 +1,8 @@
 
 const endpoint = "http://localhost:3007/api/v1/signin";
 const homePageUrl = "../HTML/manage_newsitems.html";
-const homePageUrl1 = "../HTML/Editnewsitems.html";
-const homePageUrl2 = "../HTML/search_newsitems.html";
+const editUrl = "../HTML/Editnewsitems.html";
+const searchUrl = "../HTML/search_newsitems.html";
 
 //const e = document.getElementById("Role");
 //const strUser = e.options[e.selectedIndex].text;
@@ -16,16 +16,16 @@ function onSuccess(response) {
         window.location.href = homePageUrl;
     }else if(role ==="editor"){
         alert("you have successfully logged in");
-        window.location.href = homePageUrl1;
+        window.location.href = editUrl;
     }else if(role ===" News reader"){
         alert("you have successfully logged in");
-        window.location.href = homePageUrl2;
+        window.location.href = searchUrl;
     }else if(role ===" News reporter"){
         alert("you have successfully logged in");
-        window.location.href = homePageUrl2;
+        window.location.href = searchUrl;
     }
 
-    //window.location.href = homePageUrl;
+    
 }
 
 function onFailure(response) {
