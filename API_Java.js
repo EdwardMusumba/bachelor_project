@@ -61,7 +61,7 @@ function signup() {
         }
     };
     console.log(params)
-    fetch(endpoint, params)
+    fetch(editnewsEndpoint, params)
         .then(success)
         .then(onSuccess, onFailure)
         .catch(error);
@@ -201,7 +201,7 @@ function search() {
         }
     };
     
-    fetch(endpoint, params)
+    fetch(searchEndpoint, params)
         .then(success)
         .then(onSuccess,onFailure)
         .catch(error);
@@ -265,7 +265,7 @@ function signup() {
         }
     };
     
-    fetch(endpoint, params)
+    fetch(registerEndpoint, params)
         .then(success)
         .then(onSuccess, onFailure)
         .catch(error);
@@ -349,7 +349,7 @@ function signin() {
             'Content-Type': 'application/json',
         }
     };
-    fetch(endpoint, params)
+    fetch(usersEndpoint, params)
         .then(success)
         .then(onSuccess,onFailure)
         .catch(error);
