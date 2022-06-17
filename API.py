@@ -44,7 +44,7 @@ def edit():
 
 
 @app.route("/api/v1/search_newsitems", methods=["POST"])
-def edit():
+def search():
     body = request.json
     print(body)
     try:
